@@ -1,45 +1,33 @@
-import 'dotenv/config';
-import {HardhatUserConfig} from 'hardhat/types';
-import 'hardhat-deploy';
-import 'hardhat-deploy-ethers';
-import 'hardhat-gas-reporter';
-import * as dotenv from 'dotenv';
-import {accounts} from './networks';
+import { config as dotEnvConfig } from "dotenv";
+dotEnvConfig();
 
+import { HardhatUserConfig } from "hardhat/types";
 
-dotenv.config();
+import "@nomiclabs/hardhat-waffle";
+import "@typechain/hardhat";
+import "@nomiclabs/hardhat-etherscan";
+import "solidity-coverage";
 
-const { PK_1 } = process.env;
+const INFURA_API_KEY = process.env.INFURA_API_KEY || "";
+const RINKEBY_PRIVATE_KEY =
+  process.env.RINKEBY_PRIVATE_KEY! ||
+  "0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3"; // well known private key
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 
 const config: HardhatUserConfig = {
+  defaultNetwork: "hardhat",
   solidity: {
-    compilers: [
-      {
-        version: '0.6.12',
-        settings: {
-          optimizer: {
-            enabled: false,
-            runs: 200,
-          },
-        },
-      },
-      {
-        version: '0.8.6',
-        settings: {
-          optimizer: {
-            enabled: false,
-            runs: 200,
-          },
-        },
-      },
-    ],
+    compilers: [{ version: "0.8.0", settings: {} }],
   },
   networks: {
-    hardhat: {
+    hardhat: {},
+    localhost: {},
+    rinkeby: {
+      url: `https://rinkeby.infura.io/v3/${INFURA_API_KEY}`,
+      accounts: [RINKEBY_PRIVATE_KEY],
     },
-    localhost: {
-      url: 'http://localhost:8545',
-      accounts: {mnemonic: process.env.MNEMONIC}
+    coverage: {
+      url: "http://127.0.0.1:8555", // Coverage launches its own ganache-cli client
     },
     testnet: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
@@ -47,33 +35,12 @@ const config: HardhatUserConfig = {
       gasPrice: 20000000000,
       accounts: [`0x${process.env.PK_1}`],//{mnemonic: process.env.MNEMONIC}
     },
-    kovan: {
-      url: process.env.KOVAN_INFURA_URL,
-      accounts: accounts('kovan'),
-      live: true
-    }
-  },/*
-  gasReporter: {
-    currency: 'USD',
-    gasPrice: 10,
-    enabled: !!process.env.REPORT_GAS,
   },
-  namedAccounts: {
-    creator: 1,
-    deployer:{
-      1: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
-    }
-  },*/
-  paths: {
-    sources: "./contracts",
-    tests: "./test",
-    cache: "./cache",
-    artifacts: "./artifacts"
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: ETHERSCAN_API_KEY,
   },
-  mocha: {
-    timeout: 20000
-  }
 };
 
 export default config;
-
