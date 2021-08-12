@@ -1,10 +1,10 @@
-pragma solidity 0.6.12;
+pragma solidity ^0.8.0;
 
 import "./libs/BEP20.sol";
 
 // EggToken with Governance.
 contract EggToken is BEP20('Goose Golden Egg', 'EGG') {
-    /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
+    // Note Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
     function mint(address _to, uint256 _amount) public onlyOwner {
         _mint(_to, _amount);
         _moveDelegates(address(0), _delegates[_to], _amount);
@@ -16,34 +16,34 @@ contract EggToken is BEP20('Goose Golden Egg', 'EGG') {
     // Which is copied and modified from COMPOUND:
     // https://github.com/compound-finance/compound-protocol/blob/master/contracts/Governance/Comp.sol
 
-    /// @notice A record of each accounts delegate
+    // Note A record of each accounts delegate
     mapping (address => address) internal _delegates;
 
-    /// @notice A checkpoint for marking number of votes from a given block
+    // Note A checkpoint for marking number of votes from a given block
     struct Checkpoint {
         uint32 fromBlock;
         uint256 votes;
     }
 
-    /// @notice A record of votes checkpoints for each account, by index
+    // Note A record of votes checkpoints for each account, by index
     mapping (address => mapping (uint32 => Checkpoint)) public checkpoints;
 
-    /// @notice The number of checkpoints for each account
+    // Note The number of checkpoints for each account
     mapping (address => uint32) public numCheckpoints;
 
-    /// @notice The EIP-712 typehash for the contract's domain
+    // Note The EIP-712 typehash for the contract's domain
     bytes32 public constant DOMAIN_TYPEHASH = keccak256("EIP712Domain(string name,uint256 chainId,address verifyingContract)");
 
-    /// @notice The EIP-712 typehash for the delegation struct used by the contract
+    // Note The EIP-712 typehash for the delegation struct used by the contract
     bytes32 public constant DELEGATION_TYPEHASH = keccak256("Delegation(address delegatee,uint256 nonce,uint256 expiry)");
 
-    /// @notice A record of states for signing / validating signatures
+    // Note A record of states for signing / validating signatures
     mapping (address => uint) public nonces;
 
-      /// @notice An event thats emitted when an account changes its delegate
+      // Note An event thats emitted when an account changes its delegate
     event DelegateChanged(address indexed delegator, address indexed fromDelegate, address indexed toDelegate);
 
-    /// @notice An event thats emitted when a delegate account's vote balance changes
+    // Note An event thats emitted when a delegate account's vote balance changes
     event DelegateVotesChanged(address indexed delegate, uint previousBalance, uint newBalance);
 
     /**
@@ -114,7 +114,7 @@ contract EggToken is BEP20('Goose Golden Egg', 'EGG') {
         address signatory = ecrecover(digest, v, r, s);
         require(signatory != address(0), "EGG::delegateBySig: invalid signature");
         require(nonce == nonces[signatory]++, "EGG::delegateBySig: invalid nonce");
-        require(now <= expiry, "EGG::delegateBySig: signature expired");
+        require(block.timestamp <= expiry, "EGG::delegateBySig: signature expired");
         return _delegate(signatory, delegatee);
     }
 
@@ -195,7 +195,7 @@ contract EggToken is BEP20('Goose Golden Egg', 'EGG') {
                 // decrease old representative
                 uint32 srcRepNum = numCheckpoints[srcRep];
                 uint256 srcRepOld = srcRepNum > 0 ? checkpoints[srcRep][srcRepNum - 1].votes : 0;
-                uint256 srcRepNew = srcRepOld.sub(amount);
+                uint256 srcRepNew = srcRepOld - amount;
                 _writeCheckpoint(srcRep, srcRepNum, srcRepOld, srcRepNew);
             }
 
@@ -203,7 +203,7 @@ contract EggToken is BEP20('Goose Golden Egg', 'EGG') {
                 // increase new representative
                 uint32 dstRepNum = numCheckpoints[dstRep];
                 uint256 dstRepOld = dstRepNum > 0 ? checkpoints[dstRep][dstRepNum - 1].votes : 0;
-                uint256 dstRepNew = dstRepOld.add(amount);
+                uint256 dstRepNew = dstRepOld + amount;
                 _writeCheckpoint(dstRep, dstRepNum, dstRepOld, dstRepNew);
             }
         }
@@ -234,7 +234,7 @@ contract EggToken is BEP20('Goose Golden Egg', 'EGG') {
         return uint32(n);
     }
 
-    function getChainId() internal pure returns (uint) {
+    function getChainId() internal view returns (uint) {
         uint256 chainId;
         assembly { chainId := chainid() }
         return chainId;
