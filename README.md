@@ -1,61 +1,107 @@
-# Typescript Solidity Dev Starter Kit
+# Boilerplate for ethereum solidity smart contract development
 
-_Updated to use Hardhat!_
+## INSTALL
 
-This is a starter kit for developing, testing, and deploying smart contracts with a full Typescript environment. This stack uses [Hardhat](https://hardhat.org) as the platform layer to orchestrate all the tasks. [Ethers](https://docs.ethers.io/v5/) is used for all Ethereum interactions and testing.
+```bash
+yarn
+```
 
-[Blog Post](https://medium.com/@rahulsethuram/the-new-solidity-dev-stack-buidler-ethers-waffle-typescript-tutorial-f07917de48ae)
+## TEST
 
-## Using this Project
+```bash
+yarn test
+```
 
-Clone this repository, then install the dependencies with `npm install`. Build everything with `npm run build`. https://hardhat.org has excellent docs, and can be used as reference for extending this project.
+## SCRIPTS
 
-## Available Functionality
+Here is the list of npm scripts you can execute:
 
-### Build Contracts and Generate Typechain Typeings
+Some of them relies on [./\_scripts.js](./_scripts.js) to allow parameterizing it via command line argument (have a look inside if you need modifications)
+<br/><br/>
 
-`npm run compile`
+`yarn prepare`
 
-### Run Contract Tests & Get Callstacks
+As a standard lifecycle npm script, it is executed automatically upon install. It generate config file and typechain to get you started with type safe contract interactions
+<br/><br/>
 
-In one terminal run `npx hardhat node`
+`yarn lint`, `yarn lint:fix`, `yarn format` and `yarn format:fix`
 
-Then in another run `npm run test`
+These will lint and format check your code. the `:fix` version will modifiy the files to match the requirement specified in `.eslintrc` and `.prettierrc.`
+<br/><br/>
 
-Notes:
+`yarn compile`
 
-- The gas usage table may be incomplete (the gas report currently needs to run with the `--network localhost` flag; see below).
+These will compile your contracts
+<br/><br/>
 
-### Run Contract Tests and Generate Gas Usage Report
+`yarn void:deploy`
 
-In one terminal run `npx hardhat node`
+This will deploy your contracts on the in-memory hardhat network and exit, leaving no trace. quick way to ensure deployments work as intended without consequences
+<br/><br/>
 
-Then in another run `npm run test -- --network localhost`
+`yarn test [mocha args...]`
 
-Notes:
+These will execute your tests using mocha. you can pass extra arguments to mocha
+<br/><br/>
 
-- When running with this `localhost` option, you get a gas report but may not get good callstacks
-- See [here](https://github.com/cgewecke/eth-gas-reporter#installation-and-config) for how to configure the gas usage report.
+`yarn coverage`
 
-### Run Coverage Report for Tests
+These will produce a coverage report in the `coverage/` folder
+<br/><br/>
 
-`npm run coverage`
+`yarn gas`
 
-Notes:
+These will produce a gas report for function used in the tests
+<br/><br/>
 
-- running a coverage report currently deletes artifacts, so after each coverage run you will then need to run `npx hardhat clean` followed by `npm run build` before re-running tests
-- the branch coverage is 75%
+`yarn dev`
 
-### Deploy to Ethereum
+These will run a local hardhat network on `localhost:8545` and deploy your contracts on it. Plus it will watch for any changes and redeploy them.
+<br/><br/>
 
-Create/modify network config in `hardhat.config.ts` and add API key and private key, then run:
+`yarn local:dev`
 
-`npx hardhat run --network rinkeby scripts/deploy.ts`
+This assumes a local node it running on `localhost:8545`. It will deploy your contracts on it. Plus it will watch for any changes and redeploy them.
+<br/><br/>
 
-### Verify on Etherscan
+`yarn execute <network> <file.ts> [args...]`
 
-Using the [hardhat-etherscan plugin](https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html), add Etherscan API key to `hardhat.config.ts`, then run:
+This will execute the script `<file.ts>` against the specified network
+<br/><br/>
 
-`npx hardhat verify --network rinkeby <DEPLOYED ADDRESS>`
+`yarn deploy <network> [args...]`
 
-PRs and feedback welcome!
+This will deploy the contract on the specified network.
+
+Behind the scene it uses `hardhat deploy` command so you can append any argument for it
+<br/><br/>
+
+`yarn export <network> <file.json>`
+
+This will export the abi+address of deployed contract to `<file.json>`
+<br/><br/>
+
+`yarn fork:execute <network> [--blockNumber <blockNumber>] [--deploy] <file.ts> [args...]`
+
+This will execute the script `<file.ts>` against a temporary fork of the specified network
+
+if `--deploy` is used, deploy scripts will be executed
+<br/><br/>
+
+`yarn fork:deploy <network> [--blockNumber <blockNumber>] [args...]`
+
+This will deploy the contract against a temporary fork of the specified network.
+
+Behind the scene it uses `hardhat deploy` command so you can append any argument for it
+<br/><br/>
+
+`yarn fork:test <network> [--blockNumber <blockNumber>] [mocha args...]`
+
+This will test the contract against a temporary fork of the specified network.
+<br/><br/>
+
+`yarn fork:dev <network> [--blockNumber <blockNumber>] [args...]`
+
+This will deploy the contract against a fork of the specified network and it will keep running as a node.
+
+Behind the scene it uses `hardhat node` command so you can append any argument for it

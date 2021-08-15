@@ -1,12 +1,12 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/alphachim/test-ts/contracts/Counter.sol": {
-      "lastModificationDate": 1628799258267,
-      "contentHash": "0fd57e8627a934e0c17ae20ff415d0c6",
-      "sourceName": "contracts/Counter.sol",
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1628954375400,
+      "contentHash": "e0a41531d159d3a32f84b7a3ecf9fabb",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
-        "version": "0.8.0",
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -18,423 +18,33 @@
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
               ],
               "": [
                 "ast"
               ]
             }
-          }
-        }
-      },
-      "imports": [
-        "hardhat/console.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Counter"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/hardhat/console.sol": {
-      "lastModificationDate": 1628792661290,
-      "contentHash": "cc4777addd464ea56fa35b1c45df0591",
-      "sourceName": "hardhat/console.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
           },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
+          "metadata": {
+            "useLiteralContent": true
           }
         }
       },
       "imports": [],
       "versionPragmas": [
-        ">=0.4.22 <0.9.0"
+        ">=0.6.0 <0.8.0"
       ],
       "artifacts": [
-        "console"
+        "IERC20"
       ]
     },
-    "/home/alphachim/test-ts/contracts/Greeter.sol": {
-      "lastModificationDate": 1628795836001,
-      "contentHash": "3e842e8d20d21476fa9ee5adae6c9d39",
-      "sourceName": "contracts/Greeter.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "hardhat/console.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Greeter"
-      ]
-    },
-    "/home/alphachim/test-ts/contracts/EggToken.sol": {
-      "lastModificationDate": 1628800429022,
-      "contentHash": "bfc0a5708d6ba975a978f84a4bb39536",
-      "sourceName": "contracts/EggToken.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./libs/BEP20.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "EggToken"
-      ]
-    },
-    "/home/alphachim/test-ts/contracts/libs/BEP20.sol": {
-      "lastModificationDate": 1628799866039,
-      "contentHash": "ab40d80ebe9659c3d5cfa888ad18b971",
-      "sourceName": "contracts/libs/BEP20.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/access/Ownable.sol",
-        "@openzeppelin/contracts/utils/Context.sol",
-        "./IBEP20.sol",
-        "@openzeppelin/contracts/utils/math/SafeMath.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "BEP20"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1628798259052,
-      "contentHash": "4fe56b59ced59d87df6b796758f62895",
-      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../utils/Context.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Ownable"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1628798258956,
-      "contentHash": "07f148e0d44b2ffc23b3ae6dd6e38cfb",
-      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Context"
-      ]
-    },
-    "/home/alphachim/test-ts/contracts/libs/IBEP20.sol": {
-      "lastModificationDate": 1628799258259,
-      "contentHash": "6f151a34802f3c2529a55d56041e7f29",
-      "sourceName": "contracts/libs/IBEP20.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IBEP20"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol": {
-      "lastModificationDate": 1628798259072,
-      "contentHash": "5365090efc586b728719e562ebfed0d6",
-      "sourceName": "@openzeppelin/contracts/utils/math/SafeMath.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "SafeMath"
-      ]
-    },
-    "/home/alphachim/test-ts/contracts/MasterChefV2.sol": {
-      "lastModificationDate": 1628799258267,
-      "contentHash": "6d06cdd490c3d2f5248618f4d2c4ce7e",
-      "sourceName": "contracts/MasterChefV2.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/utils/math/SafeMath.sol",
-        "./libs/IBEP20.sol",
-        "./libs/SafeBEP20.sol",
-        "@openzeppelin/contracts/access/Ownable.sol",
-        "@openzeppelin/contracts/security/ReentrancyGuard.sol",
-        "./EggToken.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "MasterChefV2"
-      ]
-    },
-    "/home/alphachim/test-ts/contracts/libs/SafeBEP20.sol": {
-      "lastModificationDate": 1628799258259,
-      "contentHash": "9d62743908ac40933cb8bb1c6ad87fec",
-      "sourceName": "contracts/libs/SafeBEP20.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IBEP20.sol",
-        "@openzeppelin/contracts/utils/math/SafeMath.sol",
-        "@openzeppelin/contracts/utils/Address.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "SafeBEP20"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol": {
-      "lastModificationDate": 1628798259060,
-      "contentHash": "53fbff678f378956efcb207fa748eaa6",
-      "sourceName": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ReentrancyGuard"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/utils/Address.sol": {
-      "lastModificationDate": 1628798258940,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1628958934302,
       "contentHash": "1ea1589528625ace210951bc8cd186c9",
       "sourceName": "@openzeppelin/contracts/utils/Address.sol",
       "solcConfig": {
@@ -450,12 +60,20 @@
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
               ],
               "": [
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": true
           }
         }
       },
@@ -467,12 +85,12 @@
         "Address"
       ]
     },
-    "/home/alphachim/test-ts/contracts/MasterChef.sol": {
-      "lastModificationDate": 1628799292075,
-      "contentHash": "01bb99c209dbef451a2e8a3f51813d6e",
-      "sourceName": "contracts/MasterChef.sol",
+    "/home/alphachim/template-ethereum-contracts/node_modules/hardhat-deploy/solc_0.7/proxy/Proxied.sol": {
+      "lastModificationDate": 1628954381780,
+      "contentHash": "59b7091f5f51eab9e4df0e1979730d36",
+      "sourceName": "hardhat-deploy/solc_0.7/proxy/Proxied.sol",
       "solcConfig": {
-        "version": "0.8.0",
+        "version": "0.7.6",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -484,224 +102,35 @@
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
               ],
               "": [
                 "ast"
               ]
             }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/utils/math/SafeMath.sol",
-        "./libs/IBEP20.sol",
-        "./libs/SafeBEP20.sol",
-        "@openzeppelin/contracts/access/Ownable.sol",
-        "./EggToken.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "MasterChef"
-      ]
-    },
-    "/home/alphachim/test-ts/contracts/lottery/Lottery.sol": {
-      "lastModificationDate": 1628799258267,
-      "contentHash": "e0ab2da1b0ee9acb788ba4936b716d7d",
-      "sourceName": "contracts/lottery/Lottery.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
           },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./LotteryNFT.sol",
-        "../libs/IBEP20.sol",
-        "../libs/SafeBEP20.sol",
-        "@openzeppelin/contracts/utils/math/SafeMath.sol",
-        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Lottery"
-      ]
-    },
-    "/home/alphachim/test-ts/contracts/lottery/LotteryNFT.sol": {
-      "lastModificationDate": 1628799258267,
-      "contentHash": "0318b31b4b1c89651bb23f21bf4d5985",
-      "sourceName": "contracts/lottery/LotteryNFT.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
-        "@openzeppelin/contracts/utils/Counters.sol",
-        "@openzeppelin/contracts/access/Ownable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "LotteryNFT"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
-      "lastModificationDate": 1628796126290,
-      "contentHash": "0961e9d7e3b0767794d82a179f4b88e4",
-      "sourceName": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../utils/ContextUpgradeable.sol",
-        "../proxy/utils/Initializable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "OwnableUpgradeable"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
-      "lastModificationDate": 1628798259012,
-      "contentHash": "68557a95c05dac5415ccbeb0a389ccaf",
-      "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IERC721.sol",
-        "./IERC721Receiver.sol",
-        "./extensions/IERC721Metadata.sol",
-        "../../utils/Address.sol",
-        "../../utils/Context.sol",
-        "../../utils/Strings.sol",
-        "../../utils/introspection/ERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC721"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
-      "lastModificationDate": 1628798258956,
-      "contentHash": "b7811964d33f23b2d45ed3ebb76a4548",
-      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
+          "metadata": {
+            "useLiteralContent": true
           }
         }
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.7.0"
       ],
       "artifacts": [
-        "Counters"
+        "Proxied"
       ]
     },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
-      "lastModificationDate": 1628798259036,
-      "contentHash": "53919d6975f2c0f3dffee5e3a1064116",
-      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+    "/home/alphachim/template-ethereum-contracts/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1628954387436,
+      "contentHash": "cc4777addd464ea56fa35b1c45df0591",
+      "sourceName": "hardhat/console.sol",
       "solcConfig": {
         "version": "0.8.0",
         "settings": {
@@ -715,415 +144,37 @@
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
               ],
               "": [
                 "ast"
               ]
             }
-          }
-        }
-      },
-      "imports": [
-        "../../utils/introspection/IERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC721"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
-      "lastModificationDate": 1628798259040,
-      "contentHash": "9a367cecca6fed80a3e975b7e6b3bd5c",
-      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
           },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
+          "metadata": {
+            "useLiteralContent": true
           }
         }
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.0"
+        ">=0.4.22 <0.9.0"
       ],
       "artifacts": [
-        "IERC721Receiver"
+        "console"
       ]
     },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
-      "lastModificationDate": 1628798259036,
-      "contentHash": "8aa69ca8424167555baaaa9f607801db",
-      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../IERC721.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC721Metadata"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1628798259076,
-      "contentHash": "62142442bed149f965c5ed971fae4182",
-      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Strings"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1628798258984,
-      "contentHash": "a9a5319dff9088c6ffe757ea1c2a6729",
-      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC165"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1628798259028,
-      "contentHash": "9a04322bb8f6b8f2767d8358d1d2537b",
-      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC165"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
-      "lastModificationDate": 1628796126170,
-      "contentHash": "5a73d7f4dcc0f73231e5599a3935b8cf",
-      "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../proxy/utils/Initializable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ContextUpgradeable"
-      ]
-    },
-    "/home/alphachim/test-ts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
-      "lastModificationDate": 1628796126274,
-      "contentHash": "cbb8386f0120d46d66ff42dffbbc16c1",
-      "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Initializable"
-      ]
-    },
-    "/home/alphachim/test-ts/contracts/Timelock.sol": {
-      "lastModificationDate": 1628800106496,
-      "contentHash": "fe1095d7efdca0ee8757e2df139ea0c5",
-      "sourceName": "contracts/Timelock.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/utils/math/SafeMath.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Timelock"
-      ]
-    },
-    "/home/alphachim/test-ts/contracts/libs/MockBEP20.sol": {
-      "lastModificationDate": 1628799258263,
-      "contentHash": "11fe34c02e58a62515a1e205a3ee6ce1",
-      "sourceName": "contracts/libs/MockBEP20.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./BEP20.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "MockBEP20"
-      ]
-    },
-    "/home/alphachim/test-ts/contracts/libs/Multicall.sol": {
-      "lastModificationDate": 1628799258255,
-      "contentHash": "35e9f0e3596815dc10629932e211da02",
-      "sourceName": "contracts/libs/Multicall.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Multicall"
-      ]
-    },
-    "/home/alphachim/test-ts/contracts/Migrations.sol": {
-      "lastModificationDate": 1628799258267,
-      "contentHash": "dca04644d5044ab1b56860492280b57a",
-      "sourceName": "contracts/Migrations.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Migrations"
-      ]
-    },
-    "/home/alphachim/qr-farm-contracts/contracts/Counter.sol": {
-      "lastModificationDate": 1628800809168,
+    "/home/alphachim/template-ethereum-contracts/src/Counter.sol": {
+      "lastModificationDate": 1628958620476,
       "contentHash": "0fd57e8627a934e0c17ae20ff415d0c6",
-      "sourceName": "contracts/Counter.sol",
+      "sourceName": "src/Counter.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1162,54 +213,12 @@
         "Counter"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/hardhat/console.sol": {
-      "lastModificationDate": 1628777564944,
-      "contentHash": "cc4777addd464ea56fa35b1c45df0591",
-      "sourceName": "hardhat/console.sol",
+    "/home/alphachim/template-ethereum-contracts/src/Greeter.sol": {
+      "lastModificationDate": 1629046127111,
+      "contentHash": "0aa9063dae9d587b354f9cb26d3d5bf9",
+      "sourceName": "src/Greeter.sol",
       "solcConfig": {
-        "version": "0.8.6",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.4.22 <0.9.0"
-      ],
-      "artifacts": [
-        "console"
-      ]
-    },
-    "/home/alphachim/qr-farm-contracts/contracts/Greeter.sol": {
-      "lastModificationDate": 1628800809176,
-      "contentHash": "3e842e8d20d21476fa9ee5adae6c9d39",
-      "sourceName": "contracts/Greeter.sol",
-      "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1248,56 +257,12 @@
         "Greeter"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/contracts/EggToken.sol": {
-      "lastModificationDate": 1628800809172,
-      "contentHash": "bfc0a5708d6ba975a978f84a4bb39536",
-      "sourceName": "contracts/EggToken.sol",
-      "solcConfig": {
-        "version": "0.8.6",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "./libs/BEP20.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "EggToken"
-      ]
-    },
-    "/home/alphachim/qr-farm-contracts/contracts/libs/BEP20.sol": {
-      "lastModificationDate": 1628800809228,
+    "/home/alphachim/template-ethereum-contracts/src/libs/BEP20.sol": {
+      "lastModificationDate": 1628958620368,
       "contentHash": "ab40d80ebe9659c3d5cfa888ad18b971",
-      "sourceName": "contracts/libs/BEP20.sol",
+      "sourceName": "src/libs/BEP20.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1339,12 +304,12 @@
         "BEP20"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1628791208027,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1628958934474,
       "contentHash": "4fe56b59ced59d87df6b796758f62895",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1383,12 +348,12 @@
         "Ownable"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1628791204055,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1628958934306,
       "contentHash": "07f148e0d44b2ffc23b3ae6dd6e38cfb",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1425,12 +390,12 @@
         "Context"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/contracts/libs/IBEP20.sol": {
-      "lastModificationDate": 1628800809232,
+    "/home/alphachim/template-ethereum-contracts/src/libs/IBEP20.sol": {
+      "lastModificationDate": 1628958620368,
       "contentHash": "6f151a34802f3c2529a55d56041e7f29",
-      "sourceName": "contracts/libs/IBEP20.sol",
+      "sourceName": "src/libs/IBEP20.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1467,12 +432,12 @@
         "IBEP20"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol": {
-      "lastModificationDate": 1628791208443,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol": {
+      "lastModificationDate": 1628958934510,
       "contentHash": "5365090efc586b728719e562ebfed0d6",
       "sourceName": "@openzeppelin/contracts/utils/math/SafeMath.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1509,12 +474,12 @@
         "SafeMath"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/contracts/MasterChefV2.sol": {
-      "lastModificationDate": 1628800809204,
-      "contentHash": "6d06cdd490c3d2f5248618f4d2c4ce7e",
-      "sourceName": "contracts/MasterChefV2.sol",
+    "/home/alphachim/template-ethereum-contracts/src/MasterChefV2.sol": {
+      "lastModificationDate": 1629055591225,
+      "contentHash": "800cb830fa81b1173ee406ed72297dd1",
+      "sourceName": "src/MasterChefV2.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1549,7 +514,7 @@
         "./libs/SafeBEP20.sol",
         "@openzeppelin/contracts/access/Ownable.sol",
         "@openzeppelin/contracts/security/ReentrancyGuard.sol",
-        "./EggToken.sol"
+        "./QuantToken.sol"
       ],
       "versionPragmas": [
         "^0.8.0"
@@ -1558,12 +523,12 @@
         "MasterChefV2"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/contracts/libs/SafeBEP20.sol": {
-      "lastModificationDate": 1628800809248,
+    "/home/alphachim/template-ethereum-contracts/src/libs/SafeBEP20.sol": {
+      "lastModificationDate": 1628958620380,
       "contentHash": "9d62743908ac40933cb8bb1c6ad87fec",
-      "sourceName": "contracts/libs/SafeBEP20.sol",
+      "sourceName": "src/libs/SafeBEP20.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1604,12 +569,12 @@
         "SafeBEP20"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol": {
-      "lastModificationDate": 1628791208283,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol": {
+      "lastModificationDate": 1628958934486,
       "contentHash": "53fbff678f378956efcb207fa748eaa6",
       "sourceName": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1646,54 +611,12 @@
         "ReentrancyGuard"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/utils/Address.sol": {
-      "lastModificationDate": 1628791203835,
-      "contentHash": "1ea1589528625ace210951bc8cd186c9",
-      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+    "/home/alphachim/template-ethereum-contracts/src/MasterChef.sol": {
+      "lastModificationDate": 1629066671843,
+      "contentHash": "b42b5e73dc77af60588a3ca348fa9062",
+      "sourceName": "src/MasterChef.sol",
       "solcConfig": {
-        "version": "0.8.6",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Address"
-      ]
-    },
-    "/home/alphachim/qr-farm-contracts/contracts/MasterChef.sol": {
-      "lastModificationDate": 1628800809188,
-      "contentHash": "01bb99c209dbef451a2e8a3f51813d6e",
-      "sourceName": "contracts/MasterChef.sol",
-      "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1727,7 +650,7 @@
         "./libs/IBEP20.sol",
         "./libs/SafeBEP20.sol",
         "@openzeppelin/contracts/access/Ownable.sol",
-        "./EggToken.sol"
+        "./QuantToken.sol"
       ],
       "versionPragmas": [
         "^0.8.0"
@@ -1736,12 +659,12 @@
         "MasterChef"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/contracts/lottery/Lottery.sol": {
-      "lastModificationDate": 1628800809252,
+    "/home/alphachim/template-ethereum-contracts/src/lottery/Lottery.sol": {
+      "lastModificationDate": 1628958620432,
       "contentHash": "e0ab2da1b0ee9acb788ba4936b716d7d",
-      "sourceName": "contracts/lottery/Lottery.sol",
+      "sourceName": "src/lottery/Lottery.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1784,12 +707,12 @@
         "Lottery"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/contracts/lottery/LotteryNFT.sol": {
-      "lastModificationDate": 1628800809256,
+    "/home/alphachim/template-ethereum-contracts/src/lottery/LotteryNFT.sol": {
+      "lastModificationDate": 1628958620436,
       "contentHash": "0318b31b4b1c89651bb23f21bf4d5985",
-      "sourceName": "contracts/lottery/LotteryNFT.sol",
+      "sourceName": "src/lottery/LotteryNFT.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1830,12 +753,12 @@
         "LotteryNFT"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
-      "lastModificationDate": 1628791207307,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
+      "lastModificationDate": 1628958934454,
       "contentHash": "0961e9d7e3b0767794d82a179f4b88e4",
       "sourceName": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1875,12 +798,12 @@
         "OwnableUpgradeable"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
-      "lastModificationDate": 1628791206163,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
+      "lastModificationDate": 1628958934362,
       "contentHash": "68557a95c05dac5415ccbeb0a389ccaf",
       "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1925,12 +848,12 @@
         "ERC721"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
-      "lastModificationDate": 1628791204083,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
+      "lastModificationDate": 1628958934306,
       "contentHash": "b7811964d33f23b2d45ed3ebb76a4548",
       "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1967,12 +890,12 @@
         "Counters"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
-      "lastModificationDate": 1628791207523,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+      "lastModificationDate": 1628958934450,
       "contentHash": "53919d6975f2c0f3dffee5e3a1064116",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2011,12 +934,12 @@
         "IERC721"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
-      "lastModificationDate": 1628791207671,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1628958934454,
       "contentHash": "9a367cecca6fed80a3e975b7e6b3bd5c",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2053,12 +976,12 @@
         "IERC721Receiver"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
-      "lastModificationDate": 1628791207627,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+      "lastModificationDate": 1628958934454,
       "contentHash": "8aa69ca8424167555baaaa9f607801db",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2097,12 +1020,12 @@
         "IERC721Metadata"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1628791208503,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1628958934514,
       "contentHash": "62142442bed149f965c5ed971fae4182",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2139,12 +1062,12 @@
         "Strings"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1628791205303,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1628958934330,
       "contentHash": "a9a5319dff9088c6ffe757ea1c2a6729",
       "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2183,12 +1106,12 @@
         "ERC165"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1628791207179,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1628958934426,
       "contentHash": "9a04322bb8f6b8f2767d8358d1d2537b",
       "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2225,12 +1148,12 @@
         "IERC165"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
-      "lastModificationDate": 1628791203359,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+      "lastModificationDate": 1628958934298,
       "contentHash": "5a73d7f4dcc0f73231e5599a3935b8cf",
       "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2269,12 +1192,12 @@
         "ContextUpgradeable"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
-      "lastModificationDate": 1628791207031,
+    "/home/alphachim/template-ethereum-contracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+      "lastModificationDate": 1628958934426,
       "contentHash": "cbb8386f0120d46d66ff42dffbbc16c1",
       "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2311,12 +1234,12 @@
         "Initializable"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/contracts/Timelock.sol": {
-      "lastModificationDate": 1628800809220,
+    "/home/alphachim/template-ethereum-contracts/src/Timelock.sol": {
+      "lastModificationDate": 1628958621076,
       "contentHash": "fe1095d7efdca0ee8757e2df139ea0c5",
-      "sourceName": "contracts/Timelock.sol",
+      "sourceName": "src/Timelock.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2355,12 +1278,12 @@
         "Timelock"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/contracts/libs/MockBEP20.sol": {
-      "lastModificationDate": 1628800809240,
+    "/home/alphachim/template-ethereum-contracts/src/libs/MockBEP20.sol": {
+      "lastModificationDate": 1628958620372,
       "contentHash": "11fe34c02e58a62515a1e205a3ee6ce1",
-      "sourceName": "contracts/libs/MockBEP20.sol",
+      "sourceName": "src/libs/MockBEP20.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2399,12 +1322,12 @@
         "MockBEP20"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/contracts/libs/Multicall.sol": {
-      "lastModificationDate": 1628800809244,
+    "/home/alphachim/template-ethereum-contracts/src/libs/Multicall.sol": {
+      "lastModificationDate": 1628958620376,
       "contentHash": "35e9f0e3596815dc10629932e211da02",
-      "sourceName": "contracts/libs/Multicall.sol",
+      "sourceName": "src/libs/Multicall.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2441,12 +1364,12 @@
         "Multicall"
       ]
     },
-    "/home/alphachim/qr-farm-contracts/contracts/Migrations.sol": {
-      "lastModificationDate": 1628800809212,
+    "/home/alphachim/template-ethereum-contracts/src/Migrations.sol": {
+      "lastModificationDate": 1628958621020,
       "contentHash": "dca04644d5044ab1b56860492280b57a",
-      "sourceName": "contracts/Migrations.sol",
+      "sourceName": "src/Migrations.sol",
       "solcConfig": {
-        "version": "0.8.6",
+        "version": "0.8.0",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2481,6 +1404,96 @@
       ],
       "artifacts": [
         "Migrations"
+      ]
+    },
+    "/home/alphachim/template-ethereum-contracts/src/TestToken.sol": {
+      "lastModificationDate": 1628958620972,
+      "contentHash": "7a18b2c541215f5a5f1b287d0776418f",
+      "sourceName": "src/TestToken.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context",
+        "IBEP20",
+        "Ownable",
+        "SafeMath",
+        "TestToken"
+      ]
+    },
+    "/home/alphachim/template-ethereum-contracts/src/QuantToken.sol": {
+      "lastModificationDate": 1629055532089,
+      "contentHash": "16ef389da2dcd888c7d9277fe389ff40",
+      "sourceName": "src/QuantToken.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./libs/BEP20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "QuantToken"
       ]
     }
   }
