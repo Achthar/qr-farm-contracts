@@ -1,13 +1,20 @@
-//SPDX-License-Identifier: Unlicense
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: MIT
 
-import "./libs/BEP20.sol";
+//SPDX-License-Identifier: Unlicense
+pragma solidity ^0.6.12;
+
+import "@pancakeswap/pancake-swap-lib/contracts/token/BEP20/BEP20.sol";
 
 // EggToken with Governance.
 contract QuantToken is BEP20("Quant Token", "QT") {
     // Note Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
     function mint(address _to, uint256 _amount) public onlyOwner {
         _mint(_to, _amount);
+        _moveDelegates(address(0), _delegates[_to], _amount);
+    }
+
+    function mint_natural(address _to, uint256 _amount) public onlyOwner {
+        _mint(_to, _amount * 10**decimals());
         _moveDelegates(address(0), _delegates[_to], _amount);
     }
 

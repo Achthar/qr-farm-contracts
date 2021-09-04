@@ -10,9 +10,13 @@ import 'hardhat-deploy';
 import 'hardhat-deploy-ethers';
 import 'hardhat-gas-reporter';
 import 'hardhat-spdx-license-identifier';
-//import 'hardhat-typechain';
+import '@typechain/hardhat';
 import 'hardhat-watcher';
 import 'solidity-coverage';
+//import './tasks';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 import {HardhatUserConfig} from 'hardhat/types';
 import {removeConsoleLog} from 'hardhat-preprocessor';
@@ -24,7 +28,16 @@ const accounts = {
   // accountsBalance: "990000000000000000000",
 };
 
+const pk: string = process.env.PRIVATE_KEY || '';
+
 const config: HardhatUserConfig = {
+  abiExporter: {
+    path: './abi',
+    clear: false,
+    flat: true,
+    // only: [],
+    // except: []
+  },
   defaultNetwork: 'hardhat',
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
@@ -32,7 +45,7 @@ const config: HardhatUserConfig = {
   gasReporter: {
     coinmarketcap: process.env.COINMARKETCAP_API_KEY,
     currency: 'USD',
-    enabled: process.env.REPORT_GAS === 'true',
+    enabled: true,
     excludeContracts: ['contracts/mocks/', 'contracts/libraries/'],
   },
   mocha: {
@@ -40,11 +53,15 @@ const config: HardhatUserConfig = {
   },
   namedAccounts: {
     deployer: {
-      default: 0,
+      default: '0x10E38dFfFCfdBaaf590D5A9958B01C9cfcF6A63B', //'0x333132d4FCbe1B7F34198AD545672BbA95c5882b',
+      ropsten: '0x10E38dFfFCfdBaaf590D5A9958B01C9cfcF6A63B', //'0x333132d4FCbe1B7F34198AD545672BbA95c5882b',
+      'bsc-testnet': '0x10E38dFfFCfdBaaf590D5A9958B01C9cfcF6A63B', //'0x333132d4FCbe1B7F34198AD545672BbA95c5882b',
+      kovan: '0x10E38dFfFCfdBaaf590D5A9958B01C9cfcF6A63B', //'0x333132d4FCbe1B7F34198AD545672BbA95c5882b',
+      mumbai: '0x10E38dFfFCfdBaaf590D5A9958B01C9cfcF6A63B', //'0x333132d4FCbe1B7F34198AD545672BbA95c5882b',
     },
     dev: {
       // Default to 1
-      default: 1,
+      default: '0x10E38dFfFCfdBaaf590D5A9958B01C9cfcF6A63B', //'0x333132d4FCbe1B7F34198AD545672BbA95c5882b',
       // dev address mainnet
       // 1: "",
     },
@@ -146,7 +163,7 @@ const config: HardhatUserConfig = {
     },
     mumbai: {
       url: 'https://rpc-mumbai.maticvigil.com/',
-      accounts,
+      accounts: [pk],
       chainId: 80001,
       live: true,
       saveDeployments: true,
@@ -169,12 +186,15 @@ const config: HardhatUserConfig = {
     },
     'bsc-testnet': {
       url: 'https://data-seed-prebsc-2-s3.binance.org:8545',
-      accounts,
+      //accounts,
       chainId: 97,
       live: true,
       saveDeployments: true,
       tags: ['staging'],
       gasMultiplier: 2,
+      accounts: [pk],
+      gas: 4100000,
+      gasPrice: 10000000000,
     },
     heco: {
       url: 'https://http-mainnet.hecochain.com',
@@ -288,7 +308,7 @@ const config: HardhatUserConfig = {
     deploy: 'deploy',
     deployments: 'deployments',
     imports: 'imports',
-    sources: 'contracts',
+    sources: 'src',
     tests: 'test',
   },
   preprocess: {
@@ -299,8 +319,17 @@ const config: HardhatUserConfig = {
   },
   solidity: {
     compilers: [
+      // {
+      //   version: '0.8.0',
+      //   settings: {
+      //     optimizer: {
+      //       enabled: true,
+      //       runs: 200,
+      //     },
+      //   },
+      // },
       {
-        version: '0.8.0',
+        version: '0.6.12',
         settings: {
           optimizer: {
             enabled: true,
@@ -309,6 +338,25 @@ const config: HardhatUserConfig = {
         },
       },
     ],
+  },
+  spdxLicenseIdentifier: {
+    overwrite: false,
+    runOnCompile: true,
+  },
+  tenderly: {
+    project: process.env.TENDERLY_PROJECT!,
+    username: process.env.TENDERLY_USERNAME!,
+  },
+  typechain: {
+    outDir: 'types',
+    target: 'ethers-v5',
+  },
+  watcher: {
+    compile: {
+      tasks: ['compile'],
+      files: ['./src'],
+      verbose: true,
+    },
   },
 };
 
